@@ -1,0 +1,3 @@
+# Git ignore for profile repo
+preview.html
+*.py

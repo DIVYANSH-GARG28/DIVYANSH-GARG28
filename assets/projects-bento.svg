@@ -1,0 +1,359 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bentoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05070D"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </linearGradient>
+
+    <!-- Frosted Card Gradients -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.015"/>
+    </linearGradient>
+
+    <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <!-- Pill Gradients -->
+    <linearGradient id="pillBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0071E3" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#64D2FF" stop-opacity="0.15"/>
+    </linearGradient>
+    <linearGradient id="pillPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5E5CE6" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#BF5AF2" stop-opacity="0.15"/>
+    </linearGradient>
+    <linearGradient id="pillGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#30D158" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#34C759" stop-opacity="0.15"/>
+    </linearGradient>
+
+    <!-- Radial Glows -->
+    <radialGradient id="cardGlow1" cx="30%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#0071E3" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0071E3" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cardGlow2" cx="80%" cy="20%" r="50%">
+      <stop offset="0%" stop-color="#BF5AF2" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#BF5AF2" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Animated Shimmer Gradient for Titles -->
+    <linearGradient id="titleShimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E5E5EA"/>
+      <stop offset="40%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#64D2FF"/>
+      <stop offset="100%" stop-color="#E5E5EA"/>
+      <animate attributeName="x1" values="-100%;100%" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0%;200%" dur="4s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <linearGradient id="purpleTitleShimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E5E5EA"/>
+      <stop offset="40%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#BF5AF2"/>
+      <stop offset="100%" stop-color="#E5E5EA"/>
+      <animate attributeName="x1" values="-100%;100%" dur="4.5s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0%;200%" dur="4.5s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <!-- Animated Glow Filter -->
+    <filter id="packetGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .sf-bold { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Plus Jakarta Sans", sans-serif; font-weight: 700; }
+    .sf-semibold { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Plus Jakarta Sans", sans-serif; font-weight: 600; }
+    .sf-medium { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Plus Jakarta Sans", sans-serif; font-weight: 500; }
+    .sf-regular { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Plus Jakarta Sans", sans-serif; font-weight: 400; }
+    .sf-mono { font-family: "SF Mono", "Fira Code", "JetBrains Mono", monospace; }
+  </style>
+
+  <rect width="1200" height="780" rx="28" fill="url(#bentoBg)"/>
+
+  <!-- ==================== BENTO ROW 1 ==================== -->
+
+  <!-- CARD 1: connectED (Wide Showcase - 730 x 340) -->
+  <g transform="translate(30, 30)">
+    <rect width="730" height="340" rx="24" fill="url(#cardGrad)" stroke="url(#cardBorder)" stroke-width="1.2"/>
+    <circle cx="200" cy="120" r="180" fill="url(#cardGlow1)"/>
+    
+    <!-- Tag -->
+    <rect x="36" y="28" width="140" height="26" rx="13" fill="url(#pillPurple)" stroke="#BF5AF2" stroke-opacity="0.3" stroke-width="1"/>
+    <text x="106" y="45" fill="#BF5AF2" class="sf-mono" font-size="11" text-anchor="middle">KNOWLEDGE GRAPH</text>
+
+    <!-- Content with Animated Shimmer Title -->
+    <text x="36" y="88" fill="url(#purpleTitleShimmer)" class="sf-bold" font-size="28" letter-spacing="-0.5">connectED</text>
+    <text x="36" y="114" fill="#8E8E93" class="sf-medium" font-size="14">Alumni Mentorship Matchmaking &amp; 31KB n8n SLA Bus</text>
+
+    <text x="36" y="146" fill="#C7C7CC" class="sf-regular" font-size="13">
+      <tspan x="36" dy="0">FastAPI architecture leveraging Neo4j graph traversal with the KCD-v1 heuristic.</tspan>
+      <tspan x="36" dy="20">Orchestrates an autonomous Telegram bot workflow with a strict 48-hour SLA</tspan>
+      <tspan x="36" dy="20">escalation timer to prevent unanswered student mentorship requests.</tspan>
+    </text>
+
+    <!-- ANIMATED GRAPH VISUAL NODES & PULSING EDGES -->
+    <g transform="translate(490, 75)">
+      <circle cx="110" cy="100" r="80" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-dasharray="4,4"/>
+      
+      <!-- Static Edges -->
+      <line x1="60" y1="60" x2="160" y2="80" stroke="#5E5CE6" stroke-width="2" stroke-opacity="0.4"/>
+      <line x1="160" y1="80" x2="110" y2="150" stroke="#BF5AF2" stroke-width="2" stroke-opacity="0.4"/>
+      <line x1="60" y1="60" x2="110" y2="150" stroke="#0071E3" stroke-width="2" stroke-opacity="0.4"/>
+
+      <!-- Animated Moving Data Packets -->
+      <circle r="4" fill="#64D2FF" filter="url(#packetGlow)">
+        <animateMotion path="M 60,60 L 160,80" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="4" fill="#BF5AF2" filter="url(#packetGlow)">
+        <animateMotion path="M 160,80 L 110,150" dur="2.4s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="4" fill="#30D158" filter="url(#packetGlow)">
+        <animateMotion path="M 110,150 L 60,60" dur="2.8s" repeatCount="indefinite"/>
+      </circle>
+
+      <!-- Pulsing Node Rings -->
+      <circle cx="60" cy="60" r="18" fill="none" stroke="#0071E3" stroke-width="1.5">
+        <animate attributeName="r" values="18;26;18" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0;0.8" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="160" cy="80" r="22" fill="none" stroke="#BF5AF2" stroke-width="1.5">
+        <animate attributeName="r" values="22;30;22" dur="3.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0;0.8" dur="3.5s" repeatCount="indefinite"/>
+      </circle>
+
+      <!-- Nodes -->
+      <circle cx="60" cy="60" r="18" fill="#0D1424" stroke="#0071E3" stroke-width="2"/>
+      <text x="60" y="64" fill="#64D2FF" class="sf-mono" font-size="9" text-anchor="middle">STUDENT</text>
+
+      <circle cx="160" cy="80" r="22" fill="#130D24" stroke="#BF5AF2" stroke-width="2"/>
+      <text x="160" y="84" fill="#BF5AF2" class="sf-mono" font-size="9" text-anchor="middle">ALUMNI</text>
+
+      <circle cx="110" cy="150" r="16" fill="#08181A" stroke="#30D158" stroke-width="2"/>
+      <text x="110" y="154" fill="#30D158" class="sf-mono" font-size="8" text-anchor="middle">DOMAIN</text>
+    </g>
+
+    <!-- Pills bottom -->
+    <g transform="translate(36, 275)">
+      <rect x="0" y="0" width="85" height="28" rx="8" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.1"/>
+      <text x="42" y="18" fill="#E5E5EA" class="sf-mono" font-size="11" text-anchor="middle">FastAPI</text>
+
+      <rect x="95" y="0" width="80" height="28" rx="8" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.1"/>
+      <text x="135" y="18" fill="#E5E5EA" class="sf-mono" font-size="11" text-anchor="middle">Neo4j</text>
+
+      <rect x="185" y="0" width="85" height="28" rx="8" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.1"/>
+      <text x="227" y="18" fill="#E5E5EA" class="sf-mono" font-size="11" text-anchor="middle">31KB n8n</text>
+
+      <rect x="280" y="0" width="115" height="28" rx="8" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.1"/>
+      <text x="337" y="18" fill="#E5E5EA" class="sf-mono" font-size="11" text-anchor="middle">Telegram API</text>
+    </g>
+  </g>
+
+  <!-- CARD 2: APEX CONNECT AI (Square Right - 390 x 340) -->
+  <!-- PERFECT VERTICAL SPACING & ZERO OVERLAP -->
+  <g transform="translate(780, 30)">
+    <rect width="390" height="340" rx="24" fill="url(#cardGrad)" stroke="url(#cardBorder)" stroke-width="1.2"/>
+    <circle cx="280" cy="100" r="160" fill="url(#cardGlow2)"/>
+
+    <!-- Tag -->
+    <rect x="36" y="28" width="145" height="26" rx="13" fill="url(#pillBlue)" stroke="#0071E3" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="108" y="45" fill="#64D2FF" class="sf-mono" font-size="11" text-anchor="middle">VOICE LLM AGENT</text>
+
+    <!-- Animated Shimmer Title -->
+    <text x="36" y="88" fill="url(#titleShimmer)" class="sf-bold" font-size="26" letter-spacing="-0.5">APEX CONNECT AI</text>
+    <text x="36" y="112" fill="#8E8E93" class="sf-medium" font-size="13.5">Qwen2-72B &amp; Web Speech Tool-Calling</text>
+
+    <!-- Description (Crisp, Ends at y=175) -->
+    <text x="36" y="138" fill="#C7C7CC" class="sf-regular" font-size="12.5">
+      <tspan x="36" dy="0">Browser-native voice agent that parses</tspan>
+      <tspan x="36" dy="18">unstructured speech, maps intent to JSON tool calls,</tspan>
+      <tspan x="36" dy="18">and resolves calendar collisions autonomously.</tspan>
+    </text>
+
+    <!-- SIRI EQUALIZER SOUNDWAVE SECTION (y = 205, height 35) -->
+    <g transform="translate(36, 205)">
+      <!-- Animated Equalizer Bars (Controlled 22px amplitude) -->
+      <line x1="0" y1="12" x2="0" y2="28" stroke="#64D2FF" stroke-width="3.5" stroke-linecap="round">
+        <animate attributeName="y1" values="14;6;14" dur="1.2s" repeatCount="indefinite"/>
+        <animate attributeName="y2" values="26;34;26" dur="1.2s" repeatCount="indefinite"/>
+      </line>
+      <line x1="12" y1="8" x2="12" y2="32" stroke="#0071E3" stroke-width="3.5" stroke-linecap="round">
+        <animate attributeName="y1" values="10;2;10" dur="1.5s" repeatCount="indefinite"/>
+        <animate attributeName="y2" values="30;38;30" dur="1.5s" repeatCount="indefinite"/>
+      </line>
+      <line x1="24" y1="4" x2="24" y2="36" stroke="#5E5CE6" stroke-width="3.5" stroke-linecap="round">
+        <animate attributeName="y1" values="4;14;4" dur="1.1s" repeatCount="indefinite"/>
+        <animate attributeName="y2" values="36;26;36" dur="1.1s" repeatCount="indefinite"/>
+      </line>
+      <line x1="36" y1="10" x2="36" y2="30" stroke="#BF5AF2" stroke-width="3.5" stroke-linecap="round">
+        <animate attributeName="y1" values="12;4;12" dur="1.4s" repeatCount="indefinite"/>
+        <animate attributeName="y2" values="28;36;28" dur="1.4s" repeatCount="indefinite"/>
+      </line>
+      <line x1="48" y1="6" x2="48" y2="34" stroke="#5E5CE6" stroke-width="3.5" stroke-linecap="round">
+        <animate attributeName="y1" values="6;16;6" dur="1.3s" repeatCount="indefinite"/>
+        <animate attributeName="y2" values="34;24;34" dur="1.3s" repeatCount="indefinite"/>
+      </line>
+      <line x1="60" y1="12" x2="60" y2="28" stroke="#64D2FF" stroke-width="3.5" stroke-linecap="round">
+        <animate attributeName="y1" values="14;8;14" dur="1.6s" repeatCount="indefinite"/>
+        <animate attributeName="y2" values="26;32;26" dur="1.6s" repeatCount="indefinite"/>
+      </line>
+      <line x1="72" y1="14" x2="72" y2="26" stroke="#30D158" stroke-width="3.5" stroke-linecap="round">
+        <animate attributeName="y1" values="16;10;16" dur="1.2s" repeatCount="indefinite"/>
+        <animate attributeName="y2" values="24;30;24" dur="1.2s" repeatCount="indefinite"/>
+      </line>
+
+      <text x="96" y="18" fill="#FFFFFF" class="sf-mono" font-size="11.5">Live Audio Synthesis</text>
+      <text x="96" y="32" fill="#64D2FF" class="sf-mono" font-size="10">0ms Per-Word Latency</text>
+    </g>
+
+    <!-- BOTTOM PILLS SECTION (y = 275 - 35px CLEARANCE FROM SOUNDWAVE, ZERO OVERLAP!) -->
+    <g transform="translate(36, 275)">
+      <rect x="0" y="0" width="145" height="28" rx="8" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.1"/>
+      <text x="72" y="18" fill="#E5E5EA" class="sf-mono" font-size="11" text-anchor="middle">Qwen2-72B-Instruct</text>
+      <rect x="155" y="0" width="85" height="28" rx="8" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.1"/>
+      <text x="197" y="18" fill="#E5E5EA" class="sf-mono" font-size="11" text-anchor="middle">Flask API</text>
+    </g>
+  </g>
+
+  <!-- ==================== BENTO ROW 2 ==================== -->
+
+  <!-- CARD 3: Node-Rover (Bottom Left - 360 x 350) -->
+  <g transform="translate(30, 400)">
+    <rect width="360" height="350" rx="24" fill="url(#cardGrad)" stroke="url(#cardBorder)" stroke-width="1.2"/>
+
+    <rect x="32" y="30" width="130" height="26" rx="13" fill="url(#pillGreen)" stroke="#30D158" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="97" y="47" fill="#30D158" class="sf-mono" font-size="11" text-anchor="middle">EDGE HARDWARE</text>
+
+    <!-- Radar Pulse in Top Right -->
+    <g transform="translate(300, 45)">
+      <circle cx="0" cy="0" r="4.5" fill="#30D158"/>
+      <circle cx="0" cy="0" r="6" stroke="#30D158" stroke-width="1.5" fill="none">
+        <animate attributeName="r" values="6;22;6" dur="2.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.9;0;0.9" dur="2.5s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <text x="32" y="90" fill="#FFFFFF" class="sf-bold" font-size="24" letter-spacing="-0.5">Node-Rover</text>
+    <text x="32" y="114" fill="#8E8E93" class="sf-medium" font-size="13">ESP32 Firmware &amp; Telemetry HUD</text>
+
+    <text x="32" y="148" fill="#C7C7CC" class="sf-regular" font-size="12.5">
+      <tspan x="32" dy="0">16KB non-blocking C++ architecture</tspan>
+      <tspan x="32" dy="18">serving Leaflet.js mapping from flash.</tspan>
+      <tspan x="32" dy="18">SPI RFID token gating with acoustic</tspan>
+      <tspan x="32" dy="18">flame hazard lockout on ADC1.</tspan>
+    </text>
+
+    <!-- Pinout Micro-Specs -->
+    <g transform="translate(32, 235)">
+      <rect width="296" height="50" rx="10" fill="#000000" fill-opacity="0.5" stroke="#FFFFFF" stroke-opacity="0.08"/>
+      <text x="16" y="22" fill="#8E8E93" class="sf-mono" font-size="10">VSPI BUS: SCK 18 | MISO 19 | MOSI 23</text>
+      <text x="16" y="38" fill="#30D158" class="sf-mono" font-size="10">TIMER: millis() non-blocking loop</text>
+    </g>
+
+    <g transform="translate(32, 300)">
+      <rect x="0" y="0" width="80" height="26" rx="6" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.1"/>
+      <text x="40" y="17" fill="#E5E5EA" class="sf-mono" font-size="10.5" text-anchor="middle">ESP32</text>
+      <rect x="90" y="0" width="85" height="26" rx="6" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.1"/>
+      <text x="132" y="17" fill="#E5E5EA" class="sf-mono" font-size="10.5" text-anchor="middle">SPI RFID</text>
+      <rect x="185" y="0" width="85" height="26" rx="6" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.1"/>
+      <text x="227" y="17" fill="#E5E5EA" class="sf-mono" font-size="10.5" text-anchor="middle">Leaflet.js</text>
+    </g>
+  </g>
+
+  <!-- CARD 4: CHESS GAJA (Explicitly labeled INTERNSHIP EXPERIENCE) -->
+  <g transform="translate(410, 400)">
+    <rect width="360" height="350" rx="24" fill="url(#cardGrad)" stroke="url(#cardBorder)" stroke-width="1.2"/>
+
+    <!-- Clear Internship Tag -->
+    <rect x="32" y="30" width="165" height="26" rx="13" fill="#FF9900" fill-opacity="0.15" stroke="#FF9900" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="114" y="47" fill="#FF9900" class="sf-mono" font-size="10.5" text-anchor="middle">INTERNSHIP EXPERIENCE</text>
+
+    <text x="32" y="90" fill="#FFFFFF" class="sf-bold" font-size="24" letter-spacing="-0.5">Chess Gaja Operations</text>
+    <text x="32" y="114" fill="#8E8E93" class="sf-medium" font-size="13">Enterprise Webhook Pipelines</text>
+
+    <!-- Big Numbers with Animated Glow -->
+    <g transform="translate(32, 145)">
+      <text x="0" y="38" fill="#30D158" class="sf-bold" font-size="44" letter-spacing="-1">~80%</text>
+      <text x="0" y="58" fill="#8E8E93" class="sf-medium" font-size="12">Manual Onboarding Effort Reduced</text>
+
+      <text x="0" y="105" fill="#64D2FF" class="sf-bold" font-size="34" letter-spacing="-0.5">&lt; 30s</text>
+      <text x="0" y="124" fill="#8E8E93" class="sf-medium" font-size="12">Sustained Event-to-Calendar Latency</text>
+    </g>
+
+    <g transform="translate(32, 300)">
+      <rect x="0" y="0" width="135" height="26" rx="6" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.1"/>
+      <text x="67" y="17" fill="#E5E5EA" class="sf-mono" font-size="10.5" text-anchor="middle">15+ Webhook Buses</text>
+      <rect x="145" y="0" width="135" height="26" rx="6" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.1"/>
+      <text x="212" y="17" fill="#E5E5EA" class="sf-mono" font-size="10.5" text-anchor="middle">Regex Sanitization</text>
+    </g>
+  </g>
+
+  <!-- CARD 5: ACADEMIC & ARSENAL (Bottom Right - 380 x 350) -->
+  <g transform="translate(790, 400)">
+    <rect width="380" height="350" rx="24" fill="url(#cardGrad)" stroke="url(#cardBorder)" stroke-width="1.2"/>
+
+    <rect x="32" y="30" width="145" height="26" rx="13" fill="url(#pillBlue)" stroke="#0071E3" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="104" y="47" fill="#64D2FF" class="sf-mono" font-size="11" text-anchor="middle">CREDENTIALS &amp; STACK</text>
+
+    <!-- GPA & AWS Callout -->
+    <g transform="translate(32, 75)">
+      <rect width="316" height="60" rx="14" fill="#FFFFFF" fill-opacity="0.03" stroke="#FFFFFF" stroke-opacity="0.08"/>
+      <text x="20" y="28" fill="#FFFFFF" class="sf-bold" font-size="18">8.16 CGPA</text>
+      <text x="20" y="46" fill="#8E8E93" class="sf-regular" font-size="11">B.Tech Computer Science &amp; Eng. (AKTU)</text>
+      <rect x="220" y="14" width="76" height="32" rx="8" fill="#FF9900" fill-opacity="0.15" stroke="#FF9900" stroke-opacity="0.4"/>
+      <text x="258" y="34" fill="#FF9900" class="sf-bold" font-size="11" text-anchor="middle">AWS SAA</text>
+    </g>
+
+    <text x="32" y="165" fill="#8E8E93" class="sf-mono" font-size="11" letter-spacing="1">CORE ARSENAL</text>
+
+    <!-- Stack Grid -->
+    <g transform="translate(32, 180)">
+      <g transform="translate(0, 0)">
+        <rect width="95" height="30" rx="8" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08"/>
+        <text x="47" y="19" fill="#FFFFFF" class="sf-medium" font-size="11.5" text-anchor="middle">Python</text>
+      </g>
+      <g transform="translate(105, 0)">
+        <rect width="95" height="30" rx="8" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08"/>
+        <text x="47" y="19" fill="#FFFFFF" class="sf-medium" font-size="11.5" text-anchor="middle">FastAPI</text>
+      </g>
+      <g transform="translate(210, 0)">
+        <rect width="105" height="30" rx="8" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08"/>
+        <text x="52" y="19" fill="#FFFFFF" class="sf-medium" font-size="11.5" text-anchor="middle">ESP32 C++</text>
+      </g>
+
+      <g transform="translate(0, 40)">
+        <rect width="95" height="30" rx="8" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08"/>
+        <text x="47" y="19" fill="#FFFFFF" class="sf-medium" font-size="11.5" text-anchor="middle">Neo4j</text>
+      </g>
+      <g transform="translate(105, 40)">
+        <rect width="95" height="30" rx="8" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08"/>
+        <text x="47" y="19" fill="#FFFFFF" class="sf-medium" font-size="11.5" text-anchor="middle">n8n Bus</text>
+      </g>
+      <g transform="translate(210, 40)">
+        <rect width="105" height="30" rx="8" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08"/>
+        <text x="52" y="19" fill="#FFFFFF" class="sf-medium" font-size="11.5" text-anchor="middle">Webhooks</text>
+      </g>
+
+      <g transform="translate(0, 80)">
+        <rect width="95" height="30" rx="8" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08"/>
+        <text x="47" y="19" fill="#FFFFFF" class="sf-medium" font-size="11.5" text-anchor="middle">Qwen2-72B</text>
+      </g>
+      <g transform="translate(105, 80)">
+        <rect width="95" height="30" rx="8" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08"/>
+        <text x="47" y="19" fill="#FFFFFF" class="sf-medium" font-size="11.5" text-anchor="middle">Docker</text>
+      </g>
+      <g transform="translate(210, 80)">
+        <rect width="105" height="30" rx="8" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08"/>
+        <text x="52" y="19" fill="#FFFFFF" class="sf-medium" font-size="11.5" text-anchor="middle">Git / Bash</text>
+      </g>
+    </g>
+  </g>
+</svg>
